@@ -1,7 +1,10 @@
 from aiogram.types import Message
 from aiogram.filters import Command
 from aiogram import Router
+from aiogram.fsm.context import FSMContext
 from TelegramHandler.keyboards import random_facts_keyboard
+from TelegramHandler.callback_keyboards import photo
+from TelegramHandler.states import ChatStates
 
 command_router = Router(name=__name__)
 
@@ -22,3 +25,10 @@ async def command_help_handler(message: Message) -> None:
 async def command_ramdomfacts_handler(message: Message) -> None:
     await message.answer("Виберіть, що ви хочете отримати",
                          reply_markup=random_facts_keyboard)
+
+@command_router.message(Command("gpt"))
+async def command_gpt_handler(message: Message, state: FSMContext) -> None:
+    await message.answer("Напишіт, що ви хочете дізнатися. Якщо ви хочите закінчити діалог напишіт 'exit'")
+    await message.answer_photo(photo=photo)
+    await state.set_state(ChatStates.chatting)
+

@@ -26,6 +26,7 @@ class OpenAIClient:
             print(f'Error in: {self.take_task.__name__}. Error is: {e}')
 
 
+
 async def main():
     client = OpenAIClient()
     random_fact = await client.take_task(f'Розкажи цікавий факт про {generate_category()}')
