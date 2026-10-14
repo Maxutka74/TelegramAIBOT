@@ -6,11 +6,11 @@ BASE_DIR = Path(__file__).parent.parent
 
 
 class AppConfig(BaseSettings):
-    openai_api_token: str
-    telegram_bot_api_key: str  # MARK: // check key or token
+    gemini_api_key: str
+    telegram_bot_api_key: str
 
-    opeanai_model: str = 'gpt-3.5-turbo'
-    opeanai_model_temperature: float = 1.5  # 0 - 2.0
+    opeanai_model: str = 'gemini-2.5-flash-lite'
+    opeanai_model_temperature: float = 1.5
 
     path_to_messages: Path = BASE_DIR / 'resoursec' / 'messages'
     path_to_images: Path = BASE_DIR / 'resoursec' / 'images'
