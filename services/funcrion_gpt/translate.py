@@ -27,7 +27,7 @@ async def translate(message: Message,state:FSMContext):
     translate_text_user = promt.get(text_translate)
 
     client = OpenAIClient(
-        openai_api_key=config.openai_api_token,
+        openai_api_key=config.gemini_api_key,
         model=config.opeanai_model,
         temperature=config.opeanai_model_temperature
     )

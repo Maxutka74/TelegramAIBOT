@@ -1,5 +1,5 @@
 from random import randint
-from services.gpt.ChatGPT import OpenAIClient
+from services.gpt.ChatGPT import OpenAIClient, logger
 from settings.config import config
 
 CATEGORY_FACTS = {
@@ -20,7 +20,7 @@ def generate_category(start: int = 1, end: int = 5) -> str:
 
 async def main():
     client = OpenAIClient(
-        openai_api_key=config.openai_api_token,
+        openai_api_key=config.gemini_api_key,
         model=config.opeanai_model,
         temperature=config.opeanai_model_temperature
     )

@@ -20,7 +20,7 @@ async def quiz_questions(state:FSMContext):
     base_prompt = promt.get(quiz)
 
     client = OpenAIClient(
-        openai_api_key=config.openai_api_token,
+        openai_api_key=config.gemini_api_key,
         model=config.opeanai_model,
         temperature=config.opeanai_model_temperature
     )

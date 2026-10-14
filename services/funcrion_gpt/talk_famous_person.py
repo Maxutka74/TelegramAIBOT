@@ -77,7 +77,7 @@ async def unified_character_handler(message: Message, state: FSMContext):
     base_prompt = prompts.get(persona)
 
     client = OpenAIClient(
-        openai_api_key=config.openai_api_token,
+        openai_api_key=config.gemini_api_key,
         model=config.opeanai_model,
         temperature=config.opeanai_model_temperature
     )
