@@ -14,7 +14,15 @@ output_router = Router()
 async def exit_chat(callback: CallbackQuery, state: FSMContext):
     quiz.true_answer = 0
     await state.clear()
-    await callback.message.answer(f"Привіт! {callback.from_user.full_name}. Я Telegram_ChatGPT бот")
+    await callback.message.answer(f"Привіт! {callback.from_user.full_name}. Я Telegram_ChatGPT бот\n\n"
+                         f"Список доступних команд:\n"
+                         f"/random - Випадковий факт\n"
+                         f"/gpt - Ваш запит до штучного інтелекту\n"
+                         f"/talk - Діалог з відомою особистістю\n"
+                         f"/quiz - Квіз на тему яку ви хочете\n"
+                         f"/translate - Перекладіть повідомлення\n"
+                         f"/image - Аналіз фото"
+                         )
     await callback.answer()
 
 @output_router.callback_query(F.data == "random_fact")

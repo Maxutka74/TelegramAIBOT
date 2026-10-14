@@ -33,7 +33,7 @@ async def main() -> None:
 
     session_repository = GptSessionRepository(config.path_to_db)
     openai_client = OpenAIClient(
-        openai_api_key=config.openai_api_token,
+        openai_api_key=config.gemini_api_key,
         model=config.opeanai_model,
         temperature=config.opeanai_model_temperature
     )

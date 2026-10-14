@@ -15,7 +15,15 @@ photo4 = FSInputFile(config.path_to_images / 'quiz.jpg')
 
 @command_router.message(Command("start"))
 async def command_start_handler(message: Message) -> None:
-    await message.answer(f"Привіт! {message.from_user.full_name}. Я Telegram_ChatGPT бот")
+    await message.answer(f"Привіт! {message.from_user.full_name}. Я Telegram_ChatGPT бот\n\n"
+                         f"Список доступних команд:\n"
+                         f"/random - Випадковий факт\n"
+                         f"/gpt - Ваш запит до штучного інтелекту\n"
+                         f"/talk - Діалог з відомою особистістю\n"
+                         f"/quiz - Квіз на тему яку ви хочете\n"
+                         f"/translate - Перекладіть повідомлення\n"
+                         f"/image - Аналіз фото"
+                         )
 
 
 @command_router.message(Command("help"))
