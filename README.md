@@ -4,6 +4,15 @@ A multifunctional Telegram bot powered by Google's Gemini AI API that provides A
 
 Built with Python and the asynchronous `aiogram` framework, the bot offers a variety of AI-powered features through an intuitive Telegram interface.
 
+## Screenshots
+
+![Screenshot 1](resoursec/screenshots/Screenshot_1.png)
+![Screenshot 2](resoursec/screenshots/Screenshot_2.png)
+![Screenshot 3](resoursec/screenshots/Screenshot_3.png)
+![Screenshot 4](resoursec/screenshots/Screenshot_4.png)
+![Screenshot 5](resoursec/screenshots/Screenshot_5.png)
+![Screenshot 6](resoursec/screenshots/Screenshot_6.png)
+
 ## Features
 
 - **AI Chat** — Ask questions and get AI-generated responses.
